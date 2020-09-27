@@ -19,8 +19,9 @@ const getImg = async (page, uri) => {
     const ogImg = document.querySelector('meta[property="og:image"]');
     if (
       ogImg != null &&
-      ogImg.content.length > 0 &&
-      (await urlImageIsAccessible(ogImg.content))
+      ogImg.content.length > 0 
+//       &&
+//       (await urlImageIsAccessible(ogImg.content))
     ) {
       return ogImg.content;
     }
